@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# from __future__ import print_function
+from __future__ import print_function
 
 import json
 import sys
@@ -13,15 +13,22 @@ global _g_kvstorage
 
 def is_str(value):
     b = True
-    #TODO: update b so that it is a boolean that indicates whether value is a string.
-    return b
+    # TODO: update b so that it is a boolean that indicates whether value is a string.
+    if isinstance(value,str):
+        return b
+    else:
+        return False
+
 
 
 def is_list_of_string(value):
     b = True
     # TODO: update b so that it is a boolean that indicates whether value is a list of strings.
-    return b
-
+    for j in value:
+        if not (is_str(j)):
+            return False
+    else:
+        return b
 
 class KVRequestHandler(BaseHTTPRequestHandler):
 

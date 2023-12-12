@@ -53,6 +53,8 @@ On Windows
 ```
 
 On macOS and Linux
+```bash
+
 
 ```bash
 chmod +x create_server0.sh #And the other numbers
